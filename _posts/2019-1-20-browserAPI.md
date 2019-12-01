@@ -1,3 +1,13 @@
+---
+layout: post
+categories: posts
+title: 浏览器 API 随记
+date-string: January 20, 2019
+# featured-image: /images/Javascript.png
+subtitle: 本文是一些使用浏览器API的经验记录。
+tags: [browser]
+---
+
 # 浏览器 API 
 本文是一些使用浏览器API的经验记录。
 
@@ -9,7 +19,9 @@
 
 Element.getBoundingClientRect()方法返回元素的大小及其相对于视口的位置。
 
-![getBoundingClientRect](https://github.com/JerryChan31/Blog/blob/master/asset/getBoundingClientRect.png)
+<center>
+  <img src="/images/getBoundingClientRect.png">
+</center>
 
 用法：
 ``` js
@@ -25,7 +37,7 @@ IntersectionObserver 是一个比较新的浏览器 API，这是一篇详细的�
 [intersectionObserver - ruanyf](http://www.ruanyifeng.com/blog/2016/11/intersectionobserver_api.html)
 
 用法：
-```JavaScript
+```js
 // 构造函数
 var io = new IntersectionObserver(callback, option);
 
@@ -45,7 +57,7 @@ io.disconnect();
 `callback`接受一个数组`entries`作为参数，数组内每个成员都是一个`IntersectionObserverEntry`对象。如果有两个被观察对象的可见性发生变化，`entries`数组就会有两个成员。
 
 `IntersectionObserverEntry`的结构如下：
-```JavaScript
+```js
 {
   time: 3893.92, // 可见性发生变化的时间，是一个高精度时间戳，单位为毫秒
   rootBounds: ClientRect { //根元素的矩形区域的信息，getBoundingClientRect()方法的返回值，如果没有根元素（即直接相对于视口滚动），则返回null

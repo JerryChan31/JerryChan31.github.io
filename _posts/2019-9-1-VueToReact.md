@@ -1,6 +1,13 @@
+---
+layout: post
+categories: posts
+title: 从 Vue 到 Taro
+date-string: OCTOBER 27, 2018
+subtitle: 初学Taro开发的个人经验记录，以及团队实践总结。
+tags: [Taro, multi-end, mini-program]
+---
+
 # 从 Vue 到 Taro
-
-
 
 ## 概览
 
@@ -42,7 +49,7 @@ Vue: 单文件组件，props 与。data
 
 React: 基于 ES6 class 的组件，props 与 state
 
-```React
+```js
 class Clock extends React.Component {
   constructor(props) { // 一般在构造函数中初始化 state，对应 Vue 中的 data
     super(props);
@@ -99,7 +106,9 @@ class Clock extends React.Component {
 
 - `componentWillUnmount()`
 
-![未命名文件](https://github.com/JerryChan31/Blog/blob/master/asset/react-life-cycle.png?raw=true)
+<center>
+  <img src="/images/react-life-cycle.png">
+</center>
 
 > 注：在 React 16.3 中，React团队为`componentWillMount()`，`componentWillUpdate()`，`componentWillReceiveProps()`这三个生命周期钩子加上了 UNSAFE 标记。**React 团队计划在 17.0 中测地废弃掉这几个 API**。改动的原因和异步渲染有关，可能会导致这些生命周期函数重复执行，详见[Update on Async Rendering](https://reactjs.org/blog/2018/03/27/update-on-async-rendering.html#initializing-state)。
 >
@@ -408,14 +417,17 @@ class ExampleComponent extends Component<IProps> {
 
 输入一份源代码，针对不同的端设定好对应的转换规则，再一键转换出对应端的代码。
 
-![img](http://img11.360buyimg.com/img/jfs/t23863/65/477773801/39493/d1292897/5b307974Na1febb30.jpg)
+<center>
+  <img src="/images/taro-compile.jpg">
+</center>
 
 实际要做的不仅仅是这些，因为不同端会有自己的原生组件，端能力 API 等等，代码直接转换过去后，可能不能直接执行。例如，小程序中普通的容器组件用的是 `<view />`，而在 H5 中则是 `<div />`；小程序中提供了丰富的端能力 API，例如网络请求、文件下载、数据缓存等，而在 H5 中对应功能的 API 则不一致。
 
 为了弥补不同端的差异，我们需要订制好一个统一的组件库标准，以及统一的 API 标准，在不同的端依靠它们的语法与能力去实现这个组件库与 API，同时还要为不同的端编写相应的运行时框架，负责初始化等等操作。
 
-![img](http://img14.360buyimg.com/img/jfs/t21535/241/1645070830/74027/775c8a15/5b307976Nce466138.jpg)
-
+<center>
+  <img src="/images/taro-runtime.jpg">
+</center>
 
 
 ## 限制

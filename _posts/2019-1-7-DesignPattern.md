@@ -1,3 +1,13 @@
+---
+layout: post
+categories: posts
+title: 设计模式学习笔记
+date-string: January 7, 2019
+# featured-image: /images/Javascript.png
+subtitle: 因为意识不到应该使用的模式，就会错过最合适的设计。——《松本行弘的程序世界》
+tags: [browser, design pattern]
+---
+
 # 设计模式学习笔记
 ## 前言
 之前去面试迅雷实习生，被问到设计模式相关的问题，竟然一时语塞，脑海里只有「工厂模式」、「简单工厂模式」之类的概念，却不能用清晰的语言表述出来。在面试的间隙看了一眼相关的资料，发现很多设计模式在日常的学习中已经用到过，但并没有系统的整理学习过————于是现在有了这篇博客。
