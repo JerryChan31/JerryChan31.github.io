@@ -1,37 +1,25 @@
-## Welcome to GitHub Pages
+# Slate+Simple Jekyll Theme
 
-You can use the [editor on GitHub](https://github.com/JerryChan31/JerryChan31.github.io/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+Slate+Simple is a sleek and minimalistic theme for Jekyll blogs. It is based on the [Clean+Simple Theme](https://github.com/nathanrooy/Clean-and-Simple-Jekyll-Theme) by [Nathan Rooy](https://nathanrooy.github.io). 
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+[Live demo.](https://benradford.github.io)
 
-### Markdown
+Slate+Simple is a light-on-dark theme that features crisp typography and includes featured images for posts. It is easily modified and provided under the MIT open source license to encourage community modifications and improvements. 
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+<figure>
+<img src="slate+simple_screenshot.png">
+</figure>
 
-```markdown
-Syntax highlighted code block
+YAML headers include support for:
 
-# Header 1
-## Header 2
-### Header 3
+* title
+* subtitle
+* author
+* featured-image
+* date-string
+* categories
+* tags
 
-- Bulleted
-- List
+Additionally, Slate+Simple supports [MathJax](https://www.mathjax.org) for beautiful equations and [Font Awesome](http://fontawesome.io/icons/). LaTeX math wrapped in `$$` will automatically compile to in-line or block images of formatted equations. Font awesome icons are included with the `i` tag. For example: `<i class='fa fa-github-alt'></i>`.
 
-1. Numbered
-2. List
 
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/JerryChan31/JerryChan31.github.io/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
