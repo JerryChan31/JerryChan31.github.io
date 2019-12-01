@@ -22,7 +22,7 @@ plugins: [jekyll-paginate]
 permalink: /:categories/:year-:month-:day/:title.html
 
 # Amount of post to show on home page
-paginate: 5
+paginate: 10
 
 #kramdown:
 #  input: GFM
