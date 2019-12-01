@@ -3,7 +3,7 @@ layout: post
 categories: posts
 title: Advanced Styling with Responsive Design
 date-string: OCTOBER 27, 2018
-# featured-image: /images/Javascript.png
+featured-image: /images/css3.png
 tags: [responsive, css]
 ---
 

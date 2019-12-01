@@ -3,7 +3,7 @@ layout: post
 categories: posts
 title: 设计模式学习笔记
 date-string: January 7, 2019
-# featured-image: /images/Javascript.png
+featured-image: /images/js.png
 subtitle: 因为意识不到应该使用的模式，就会错过最合适的设计。——《松本行弘的程序世界》
 tags: [browser, design pattern]
 ---

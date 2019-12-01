@@ -3,6 +3,7 @@ layout: post
 categories: posts
 title: 从 Vue 到 Taro
 date-string: OCTOBER 27, 2018
+featured-image: /images/taro.png
 subtitle: 初学Taro开发的个人经验记录，以及团队实践总结。
 tags: [Taro, multi-end, mini-program]
 ---
