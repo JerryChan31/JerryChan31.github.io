@@ -91,3 +91,15 @@ IntersectionObserver的实现采用了`requestIdleCallback()`，即只有线程�
 如果是通过鼠标点击等事件触发，判断元素和视口的交叉状态，则可以使用`getBoundingClientRect`，因为它调用更简单，兼容性更好。
 
 选择的关键：如果通过scroll事件来监听`getBoundingClientRect`的变化，容易造成性能问题。
+
+
+## 判断页面是否可见
+
+可以在`window`对象上添加`visibilitychange`的事件监听，通过`document.hidden`来判断是否可见。
+常用于页面切换后静音、停止播放、暂停计时、埋点上报等操作。
+
+**浏览器兼容性注意事项：**
+
+
+参考地址：[页面可见性 API - Web API 接口参考 | MDN](https://developer.mozilla.org/zh-CN/docs/Web/API/Page_Visibility_API)
+
