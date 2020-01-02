@@ -5,7 +5,7 @@ title: 浏览器 API 随记
 date-string: January 20, 2019
 featured-image: /images/browser.jpg
 subtitle: 本文是一些使用浏览器API的经验记录。
-tags: [browser]
+tags: [browser, keep-update]
 ---
 
 # 浏览器 API 
