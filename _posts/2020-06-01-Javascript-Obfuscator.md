@@ -2,10 +2,10 @@
 layout: post
 categories: posts
 title: "Javascript Obfuscator 前端代码混淆方案"
-tags: [Javascript, webpack]
+subtitle: 
+tags: [JavaScript, Webpack]
 date-string: June 1, 2020
 ---
-# Javascript Obfuscator 前端代码混淆方案
 ## 简介
 
 > JavaScript Obfuscator is a powerful free obfuscator for JavaScript, containing a variety of features which provide protection for your source code.
