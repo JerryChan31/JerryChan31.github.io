@@ -329,3 +329,9 @@ Performance will slightly slower than without obfuscation
 `pages/routeA/index.js` 138 KiB 745%
 
 `pages/routeC/index.js` 74.2 KiB 927%
+
+## 思考
+
+- ⚠️前端代码混淆只是提高代码破解的成本，将系统的安全性依赖在前端代码混淆上会是致命的。
+- 代码混淆会影响代码体积和代码性能，需要在混淆程度和性能之间取一个平衡。
+- 尽量只混淆需要被混淆的代码，在一个大的项目里，只对需要被混淆的页面混淆，SSR同构代码也只对client端代码进行混淆。
