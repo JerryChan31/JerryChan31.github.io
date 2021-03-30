@@ -2,7 +2,7 @@
 layout: post
 categories: posts
 title: File Hierarchy Standard (FHS)
-subtitle: 翻译/整理自https://www.linux.org/threads/file-hierarchy-standard-fhs.9999/。
+excerpt: 翻译/整理自https://www.linux.org/threads/file-hierarchy-standard-fhs.9999/。
 tags: [linux]
 date-string: DECEMBER 30, 2019
 ---

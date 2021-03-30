@@ -3,7 +3,7 @@ layout: post
 categories: posts
 title: 浏览器 API 随记
 date-string: January 20, 2019
-subtitle: 本文是一些使用浏览器API的经验记录。
+excerpt: 本文是一些使用浏览器API的经验记录。
 tags: [browser, keep-update]
 ---
 ![$cover](/images/browser.jpg)
