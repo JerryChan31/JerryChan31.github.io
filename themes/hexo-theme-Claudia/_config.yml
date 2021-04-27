@@ -13,19 +13,14 @@ widgets:
 
 # social config
 social:
-  zhihu:
-  twitter: /
-  facebook: /
-  linkedin:
-  instagram: /
-  github: haojen
+  github: JerryChan31
 
 user:
   name: JerryChan
-  avatar: /images/avatar.jpg
-  location: In the dust
-  description: May the Force be with you
-  footnotes: # footnotes
+  avatar: /images/avatar.jpeg
+  location: Thunder Network, Shenzhen
+  description: Front-end Engineer
+  footnotes: 不要失去对新事物的兴趣 # footnotes
 
 # documents: https://github.com/utterance/utterances
 # API config: https://utteranc.es/
@@ -48,7 +43,7 @@ comment_disqus:
 # dark
 # light
 # user-can-set
-appearance: auto # Default value is auto
+appearance: light # Default value is auto
 
 # Miscellaneous
 favicon: /images/favicon.png
