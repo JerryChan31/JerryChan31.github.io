@@ -4,7 +4,7 @@ categories: posts
 title: 用 GitLab CI 进行持续集成
 excerpt: 原文作者scarletsky，原文地址： https://scarletsky.github.io/2016/07/29/use-gitlab-ci-for-continuous-integration/，转载已获授权。
 tags: [CI]
-date-string: March 11, 2020
+date: March 11, 2020
 ---
 
 ## 简介

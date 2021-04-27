@@ -2,7 +2,7 @@
 layout: post
 categories: posts
 title: JavaScript高级程序设计-读书笔记
-date-string: OCTOBER 27, 2018
+date: OCTOBER 27, 2018
 tags: [JavaScript, booknote]
 ---
 ![$cover](/images/js.png)

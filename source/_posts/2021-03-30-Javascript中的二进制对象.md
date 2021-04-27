@@ -4,7 +4,7 @@ categories: posts
 title: "Javascript中的二进制对象"
 excerpt: ""
 tags: [JavaScript, Node.js]
-date-string: March 30, 2021
+date: March 30, 2021
 ---
 
 ![cover](/images/2021-03-30-Javascript中的二进制对象/buffersource.png)

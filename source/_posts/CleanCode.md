@@ -2,7 +2,7 @@
 layout: post
 categories: posts
 title: Clean Code阅读笔记
-date-string: OCTOBER 27, 2018
+date: OCTOBER 27, 2018
 excerpt: 代码简洁之道
 tags: [engineering]
 ---

@@ -4,7 +4,7 @@ categories: posts
 title: "Javascript Obfuscator 前端代码混淆方案"
 excerpt: 前端代码混淆加密，提升代码破解成本～
 tags: [JavaScript, Webpack]
-date-string: June 1, 2020
+date: June 1, 2020
 ---
 ## 简介
 

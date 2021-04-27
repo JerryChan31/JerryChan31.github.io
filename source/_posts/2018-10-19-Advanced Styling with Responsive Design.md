@@ -2,7 +2,7 @@
 layout: post
 categories: posts
 title: Advanced Styling with Responsive Design
-date-string: OCTOBER 27, 2018
+date: OCTOBER 27, 2018
 tags: [responsive, css]
 ---
 ![$cover](/images/css3.png)
