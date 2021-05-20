@@ -1,4 +1,16 @@
-# LeetCode刷题
+---
+layout: post
+categories: posts
+title: LeetCode刷题
+date: April 28, 2021
+excerpt: 覃超
+tags: [leetcode, algorithm]
+
+---
+
+
+
+## 链表
 
 ### 206 反转链表
 
@@ -146,5 +158,198 @@ var hasCycle = function(head) {
 
 
 
+## 栈
+
 ### 20 有效的括号
+
+题目：
+
+https://leetcode-cn.com/problems/valid-parentheses/
+
+```js
+/**
+ * @param {string} s
+ * @return {boolean}
+ */
+var isValid = function(s) {
+  const map = {
+    ')': '(',
+    '}': '{',
+    ']': '['
+  }
+  const stack = []
+  for (let i = 0; i < s.length; i++) {
+    if (['}', ')', ']'].includes(s[i])) {
+      if (stack.pop() !== map[s[i]]) {
+        return false
+      }
+    } else {
+      stack.push(s[i])
+    }
+  }
+  return !stack.length
+};
+```
+
+
+
+## 树
+
+### 144 二叉树的前序遍历
+
+根节点 - 左子树 - 右子树
+
+题目：
+
+https://leetcode-cn.com/problems/binary-tree-preorder-traversal/
+
+```js
+/**
+ * Definition for a binary tree node.
+ * function TreeNode(val, left, right) {
+ *     this.val = (val===undefined ? 0 : val)
+ *     this.left = (left===undefined ? null : left)
+ *     this.right = (right===undefined ? null : right)
+ * }
+ */
+/**
+ * @param {TreeNode} root
+ * @return {number[]}
+ */
+var preorderTraversal = function(root) {
+  let res = []
+  if (root !== null) res.push(root.val)
+  if (root.left !== null) res = [...res, ...preorderTraversal(root.left)]
+  if (root.right !== null) res = [...res, ...preorderTraversal(root.right)]
+  return res
+};
+```
+
+
+
+### 145 二叉树的后序遍历
+
+左子树 - 右子树 - 根节点
+
+题目：
+
+https://leetcode-cn.com/problems/binary-tree-postorder-traversal/
+
+```js
+/**
+ * Definition for a binary tree node.
+ * function TreeNode(val, left, right) {
+ *     this.val = (val===undefined ? 0 : val)
+ *     this.left = (left===undefined ? null : left)
+ *     this.right = (right===undefined ? null : right)
+ * }
+ */
+/**
+ * @param {TreeNode} root
+ * @return {number[]}
+ */
+var postorderTraversal = function(root) {
+  let res = []
+  if (root && root.left !== null) {
+    res = [...res, ...postorderTraversal(root.left)]
+  }
+  if (root && root.right !== null) {
+    res = [...res, ...postorderTraversal(root.right)]
+  }
+  if (root !== undefined && root !== null) {
+    res.push(root.val)
+  }
+  return res
+};
+```
+
+
+
+### 94 二叉树的中序遍历
+
+左子树 - 根节点 - 右子树
+
+题：
+
+https://leetcode-cn.com/problems/binary-tree-inorder-traversal/
+
+```js
+/**
+ * Definition for a binary tree node.
+ * function TreeNode(val, left, right) {
+ *     this.val = (val===undefined ? 0 : val)
+ *     this.left = (left===undefined ? null : left)
+ *     this.right = (right===undefined ? null : right)
+ * }
+ */
+/**
+ * @param {TreeNode} root
+ * @return {number[]}
+ */
+var inorderTraversal = function(root) {
+  let res = []
+  if (root && root.left !== null) {
+    res = [...res, ...inorderTraversal(root.left)]
+  }
+  if (root !== undefined && root !== null) {
+    res.push(root.val)
+  }
+  if (root && root.right !== null) {
+    res = [...res, ...inorderTraversal(root.right)]
+  }
+  return res
+};
+```
+
+
+
+## misc
+
+### 15 三数之和
+
+双指针法：
+
+先排序，再单循环，每个循环使用头尾两个指针判断三数之和是否为0并移动指针。
+
+难点在于如何排除重复的解：
+
+```js
+/**
+ * @param {number[]} nums
+ * @return {number[][]}
+ */
+var threeSum = function(nums) {
+  if (nums.length < 3) {
+    return []
+  }
+  nums.sort((a, b) => {
+    return a - b
+  })
+  const result = []
+  for (let i = 0; i < nums.length; i++) {    
+    let L = i + 1
+    let R = nums.length - 1
+    // 从第一个数排除重复解
+    if (nums[i] === nums[i - 1]) continue
+
+    while (L < R) {
+      let sum = nums[i] + nums[L] + nums[R]
+      if (sum === 0) {
+        const tempRes = [nums[i], nums[L], nums[R]]
+        result.push(tempRes)
+        // 从第二、三个数排除重复解
+        while(L < R && nums[R] === nums[R - 1]) R--
+        while(L < R && nums[L] === nums[L + 1]) L++
+        L++
+        continue
+      } else if (sum > 0) {
+        R--
+      } else {
+        L++
+      }
+    }
+  }
+  return result
+};
+```
 
