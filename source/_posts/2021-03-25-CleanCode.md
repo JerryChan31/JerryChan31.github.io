@@ -2,12 +2,10 @@
 layout: post
 categories: posts
 title: Clean Code阅读笔记
-date: OCTOBER 27, 2018
+date: MARCH 25, 2021
 excerpt: 代码简洁之道
-tags: [engineering]
+tags: [engineering, booknote]
 ---
-
-
 
 # Clean Code阅读笔记
 
