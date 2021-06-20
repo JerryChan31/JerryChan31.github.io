@@ -2,7 +2,7 @@
 layout: post
 categories: posts
 title: "Javascript中的二进制对象"
-excerpt: ""
+excerpt: "ArrayBuffer对象、TypedArray视图和DataView视图是 JavaScript 操作二进制数据的一个接口。它们都是以数组的语法处理二进制数据，所以统称为二进制数组。"
 tags: [JavaScript, Node.js]
 date: March 30, 2021
 ---
