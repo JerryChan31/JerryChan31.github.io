@@ -10,7 +10,7 @@ excerpt: "Jest测试使用tsx编写的Vue3.0组件，提供最小配置样例可
 ## 背景
 最近在研究和开发基于Vue3.0的组件库。组件是使用tsx编写的，在配置单元测试的过程中遇到一些问题，特此记录。
 
-### ts-jest 还是 babel-jest？
+## ts-jest 还是 babel-jest？
 想要在Jest中运行TS代码的单元测试，目前（2021-12-26）有两种方案可供选择：
 1. 使用`@babel/preset-typescript`，配合`babel-jest`，`@babel/core`和`@babel/preset-env`。
 2. 使用`ts-jest`。
@@ -23,10 +23,10 @@ excerpt: "Jest测试使用tsx编写的Vue3.0组件，提供最小配置样例可
 
 参考资料：[Babel7 or TypeScript](https://kulshekhar.github.io/ts-jest/docs/babel7-or-ts)
 
-## 如何配置
+## 如何配置？
 下面介绍如何给一个基于tsx编写的Vue 3项目配置Jest单元测试框架。
 
-### 1. 安装依赖。
+### 1. 安装依赖
 ```bash
 pnpm i -D jest ts-jest @types/jest @vue/test-utils
 ```
@@ -36,7 +36,7 @@ pnpm i -D jest ts-jest @types/jest @vue/test-utils
   - `@vue/test-utils`：vue的测试套件库。
 
 
-### 2. 在`tsconfig.json`的默认配置上进行修改。
+### 2. 在`tsconfig.json`的默认配置上进行修改
 ```json
 {
   ...,
@@ -55,7 +55,7 @@ pnpm i -D jest ts-jest @types/jest @vue/test-utils
 
 
 
-### 3. 生成`jest.config.js`并进行修改。
+### 3. 生成`jest.config.js`并进行修改
 ```bash
 npx ts-jest config:init
 ```
