@@ -112,7 +112,7 @@ neat_html:
 neat_css:
   enable: true
   exclude:
-    - '*.min.css'
+    - '**/*.min.css'
 
 neat_js:
   enable: true
@@ -120,4 +120,4 @@ neat_js:
   output:
   compress:
   exclude:
-    - '*.min.js'
+    - '**/*.min.js'
