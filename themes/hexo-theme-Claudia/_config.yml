@@ -26,7 +26,7 @@ user:
 # API config: https://utteranc.es/
 comment_utteranc:
   enable: true
-  repo: Haojen/Claudia-theme-blog # your blog repo
+  repo: JerryChan31/JerryChan31.github.io
 
 
 # documents: https://valine.js.org/quickstart.html
