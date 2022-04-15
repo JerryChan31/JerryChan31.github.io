@@ -6,3 +6,5 @@ node_modules/
 public/
 public.zip
 .deploy*/
+.jekyll-cache
+_site
