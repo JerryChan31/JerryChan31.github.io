@@ -17,7 +17,7 @@ tags: [SVG, Chrome]
 
 于是我写出了这样的代码：
 
-这里有[CodePen示例](https://codepen.io/JerryChan31/pen/MWVjGzy)，如果失效，你也可以直接将下面这段代码粘贴到一个HTML文件中然后打开。
+> 这里有[CodePen示例](https://codepen.io/JerryChan31/pen/MWVjGzy)，如果失效，你也可以直接将下面这段代码粘贴到一个HTML文件中然后打开。
 
 ```html
 <h1>灰色为可hover区域</h1>
@@ -93,13 +93,20 @@ tags: [SVG, Chrome]
 
 深入研究之后，还发现了更离奇的事情——在调试器中对第一个元素设置`force: hover`后，第二个元素的hover行为也恢复正常了！
 
-而按照我编写的代码来看，这两个`<li>`元素的行为应该完全一致才是，但现在则产生了差异。这是最让人感到困惑的地方。在一番上网搜索后，发现了这一篇[文章](https://blog.patw.me/archives/1820/inline-svg-same-id-and-display-none-issue/)，文中的情景二提到的，跟我遇到的问题是一致的。沿着这篇文章，我又查阅了许多资料，对这个问题大概有了一个更加全面的了解，下面容我慢慢分说。
+而按照我编写的代码来看，这两个`<li>`元素的行为应该完全一致才是，但现在则产生了差异。这是最让人感到困惑的地方。
 
-## 
+## 什么是`<defs>`
 
-简单来说就是，这个作者发现在渲染多个完全一致且带有渐变的SVG时，如果对第一个SVG应用`display: none`，会连带着让后面的
+要解释这个问题，首先要了解一下SVG标准中的`<defs>`。你可以查看它的[MDN文档](https://developer.mozilla.org/zh-CN/docs/Web/SVG/Element/defs)来更加深入地了解。
 
+`<defs>`可以让我们定义需要重复使用的图形，并在需要使用它的地方直接引用。在上面的例子里，我们定义的`<defs>`中定义了三个线性渐变（`linearGradient`）元素，它们的id分别是：`paint0_linear_60_59804`, `paint1_linear_60_59804`, `paint2_linear_60_59804`；这三个线性渐变元素被定义后，分别在`<rect>`和`<path>`的`fill`和`stroke`属性中被引用。
 
+这样做的目的，是为了让SVG有更好的易读性和可访问性。
 
+## 问题探索
+
+在一番上网搜索后，发现了这一篇[文章](https://blog.patw.me/archives/1820/inline-svg-same-id-and-display-none-issue/)，文中的情景二提到的，跟我遇到的问题是一致的。沿着这篇文章，我又查阅了许多资料，对这个问题大概有了一个更加全面的了解，下面容我慢慢分说。
+
+简单来说就是，这个作者发现在渲染多个完全一致且带有渐变的SVG时，如果对第一个SVG应用`display: none`，会连带着让后面的SVG也失效；
 
 
