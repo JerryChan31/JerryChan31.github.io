@@ -7,4 +7,4 @@ BUILD_COMMAND="node --version;npm --version;npm install; npm run server;"
 echo $BUILD_COMMAND
 echo $(pwd)
 
-docker run --rm -v $(pwd)/:/var/static -p 4000:4000 -w /var/static node:14.17.5 /bin/sh -c "$BUILD_COMMAND" -it || exit 1
+docker run --rm -v $(pwd)/:/var/static -p 4000:4000 -w /var/static node:14.17.5 /bin/sh -i -c "$BUILD_COMMAND"  || exit 1
